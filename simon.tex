@@ -1,0 +1,50 @@
+%intro, simon algorithm
+
+
+\frame{
+  Problema: Sea $f:\mathbb{B}^n\rightarrow\ \mathbb{B}^n$,
+  y $s \in \mathbb{B}^n$, donde $f(x) = f(x \oplus s)$
+  \pause
+  Soluci\'on cl\'asica:
+  \begin{itemize}
+  \item $f$ es una funci\'on gen\'erica, no podemos
+    hacer m\'as que evaluarle.
+  \item Potencialmente el recorrido de $f$ tiene cardinal $2^{n-1}$.
+  \item Para encontrar dos im\'agenes distintas
+    necesitamos potencialmente $ o(2^{\frac{n}{2}})$ evaluaciones.
+  \end{itemize}
+}
+
+\frame{
+  
+  \includegraphics[scale=0.4]{./graphics/simon}
+}
+
+\frame{
+
+
+  $\left(\begin{array}{rrrrrrrr}
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+1 & \left(\frac{1}{2} i + \frac{1}{2}\right) \, \sqrt{2} & i
+& \left(\frac{1}{2} i - \frac{1}{2}\right) \, \sqrt{2} & -1
+& -\left(\frac{1}{2} i + \frac{1}{2}\right) \, \sqrt{2} & -i
+& -\left(\frac{1}{2} i - \frac{1}{2}\right) \, \sqrt{2} \\
+1 & i & -1 & -i & 1 & i & -1 & -i \\
+1 & \left(\frac{1}{2} i - \frac{1}{2}\right) \, \sqrt{2} & -i
+& \left(\frac{1}{2} i + \frac{1}{2}\right) \, \sqrt{2} & -1
+& -\left(\frac{1}{2} i - \frac{1}{2}\right) \, \sqrt{2} & i
+& -\left(\frac{1}{2} i + \frac{1}{2}\right) \, \sqrt{2} \\
+1 & -1 & 1 & -1 & 1 & -1 & 1 & -1 \\
+1 & -\left(\frac{1}{2} i + \frac{1}{2}\right) \, \sqrt{2} & i
+& -\left(\frac{1}{2} i - \frac{1}{2}\right) \, \sqrt{2} & -1
+& \left(\frac{1}{2} i + \frac{1}{2}\right) \, \sqrt{2} & -i
+& \left(\frac{1}{2} i - \frac{1}{2}\right) \, \sqrt{2} \\
+1 & -i & -1 & i & 1 & -i & -1 & i \\
+1 & -\left(\frac{1}{2} i - \frac{1}{2}\right) \, \sqrt{2} & -i
+& -\left(\frac{1}{2} i + \frac{1}{2}\right) \, \sqrt{2} & -1
+& \left(\frac{1}{2} i - \frac{1}{2}\right) \, \sqrt{2} & i &
+\left(\frac{1}{2} i + \frac{1}{2}\right) \, \sqrt{2}
+\end{array}\right)$
+
+
+}

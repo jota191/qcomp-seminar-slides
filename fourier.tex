@@ -1,0 +1,64 @@
+
+\frame{\frametitle{Transformada de Fourier (Discreta).}
+
+  Definici\'on: La $DFT$ es una funci\'on de tipo
+  $\mathbb{C}^N\rightarrow\mathbb{C}^N$.
+  
+  Si $X_0, \cdots X_{N-1}$ es una secuencia de $N$ n\'umeros
+  complejos y $Y_0, \cdots Y_{N-1}$ la transformada, se cumple que:
+  $$
+  Y_i = \sum_{j=0}^{N-1}{X_j \omega^{ij}}
+  $$
+  Donde $\omega = e^{i \frac{2\pi}{N}}$ es una ra\'iz \emph{primitiva}
+  $N-$\'esima de la unidad.
+}
+
+
+\frame{\frametitle{Transformada de Fourier (Discreta).}
+  Si consideramos $X_1 \cdots X_{N-1}$ como vector,
+  hacer la DFT es multiplicar por la matriz:
+
+  {
+    %blob
+    $\displaystyle DFT_n={\begin{bmatrix}1&1&1&1&\cdots &1\\1&\omega &\omega ^{2}&\omega ^{3}&\cdots &\omega ^{N-1}\\1&\omega ^{2}&\omega ^{4}&\omega ^{6}&\cdots &\omega ^{2(N-1)}\\1&\omega ^{3}&\omega ^{6}&\omega ^{9}&\cdots &\omega ^{3(N-1)}\\\vdots &\vdots &\vdots &\vdots &\ddots &\vdots \\1&\omega ^{N-1}&\omega ^{2(N-1)}&\omega ^{3(N-1)}&\cdots &\omega ^{(N-1)(N-1)}\end{bmatrix}}$
+}}
+
+\frame{\frametitle{Transformada de Fourier (Cu\'antica).}
+  Consideramos la transformaci\'on unitaria:
+  $$QFT_N={\frac{1}{\sqrt{N}}\begin{bmatrix}1&1&1&1&\cdots &1\\1&\omega &\omega ^{2}&\omega ^{3}&\cdots &\omega ^{N-1}\\1&\omega ^{2}&\omega ^{4}&\omega ^{6}&\cdots &\omega ^{2(N-1)}\\1&\omega ^{3}&\omega ^{6}&\omega ^{9}&\cdots &\omega ^{3(N-1)}\\\vdots &\vdots &\vdots &\vdots &\ddots &\vdots \\1&\omega ^{N-1}&\omega ^{2(N-1)}&\omega ^{3(N-1)}&\cdots &\omega ^{(N-1)(N-1)}\end{bmatrix}}$$
+
+  A este circuito/programa lo llamamos $QFT_N$.
+}
+
+\frame{
+  Notar que $QFT_N$ act\'ua sobre un estado cu\'antico
+  en un sistema de $N$ niveles (vector normalizado),
+  y $DFT_N$ sobre un vector arbitrario.\pause
+  
+  $QFT$ es un operador unitario, $DFT$ no necesariamente,
+  por lo dem\'as van a cumplir propiedades similares.
+  
+}
+
+
+\frame{\frametitle{Transformada de Fourier Cu\'antica.}
+       \framesubtitle{Propiedades de la FT}
+  Es unitaria.
+}  
+\frame{\frametitle{Transformada de Fourier Cu\'antica.}
+       \framesubtitle{Propiedades de la FT}
+  Si hacemos un shift en la entrada,
+  los m\'odulos de la salida no cambian.
+}
+
+\frame{\frametitle{Transformada de Fourier Cu\'antica.}
+    \framesubtitle{Propiedades de la FT}
+  Para una $QFT_{nk}$
+  Si la entrada es una funci\'on de $k$ per\'iodos,
+  la salida tiene valores no nulos en los m\'ultiplos de $n$.
+}
+
+\frame{\frametitle{Transformada de Fourier (Discreta).}
+    \framesubtitle{Propiedades de la FT}
+  Un caso m\'as restrictivo.
+}
